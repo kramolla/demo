@@ -87,7 +87,7 @@
         <x>0</x>
         <y>0</y>
         <width>780</width>
-        <height>442</height>
+        <height>450</height>
        </rect>
       </property>
       <widget class="QWidget" name="verticalLayoutWidget">
@@ -105,9 +105,9 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="addPartnerButton">
      <property name="styleSheet">
-      <string notr="true">background-color: #67BA80</string>
+      <string notr="true">background-color: #67BA80; border: none</string>
      </property>
      <property name="text">
       <string>Добавить партнёра</string>

@@ -32,6 +32,12 @@
    <iconset>
     <normaloff>../icons/Master_pol.ico</normaloff>../icons/Master_pol.ico</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton{
+	background-color: #67BA80;
+	border: none
+}</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QComboBox" name="type_input">
