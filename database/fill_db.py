@@ -79,6 +79,8 @@ try:
                 or not address or not inn or not rate:
             continue
 
+
+
         session.add(PartnerModel(
             type=type,
             name=name,

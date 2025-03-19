@@ -20,48 +20,55 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: #fff;</string>
+   <string notr="true">background-color: #fff;
+font-size: 18px
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QFrame" name="verticalFrame">
+    <widget class="QLabel" name="Title">
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">color: black; font-size: 20px</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QLabel" name="Title">
-        <property name="styleSheet">
-         <string notr="true">color: black; font-size: 20px</string>
-        </property>
-        <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Заказы&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QScrollArea" name="scrollArea">
-        <property name="widgetResizable">
-         <bool>true</bool>
-        </property>
-        <widget class="QWidget" name="scrollAreaWidgetContents">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>581</width>
-           <height>376</height>
-          </rect>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_4">
-          <item>
-           <layout class="QVBoxLayout" name="list"/>
-          </item>
-         </layout>
-        </widget>
-       </widget>
-      </item>
-     </layout>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Заказы&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>599</width>
+        <height>364</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QVBoxLayout" name="list"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="BackButton">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: #67BA80;
+border: none;</string>
+     </property>
+     <property name="text">
+      <string>Назад</string>
+     </property>
     </widget>
    </item>
   </layout>

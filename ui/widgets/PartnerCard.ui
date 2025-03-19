@@ -7,72 +7,84 @@
     <x>0</x>
     <y>0</y>
     <width>900</width>
-    <height>196</height>
+    <height>202</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">font-size: 18px;
+padding: 0px</string>
+  </property>
   <layout class="QHBoxLayout" name="horizontalLayout_3">
    <item>
-    <widget class="QFrame" name="PartnerCardVBox">
-     <property name="styleSheet">
-      <string notr="true">background: white;  color: black; font-size: 15px; padding: 0px</string>
+    <widget class="QFrame" name="horizontalFrame">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="styleSheet">
+      <string notr="true">border: 2px solid black;</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QFrame" name="horizontalFrame">
-        <property name="styleSheet">
-         <string notr="true">border: 2px solid black;</string>
+       <widget class="QFrame" name="FirstColumn">
+        <property name="enabled">
+         <bool>true</bool>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="styleSheet">
+         <string notr="true">border: none; padding: 0;</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QFrame" name="FirstColumn">
-           <property name="styleSheet">
-            <string notr="true">border: none; padding: 0;</string>
+          <widget class="QPushButton" name="PartnerTypeAndName">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-             <widget class="QPushButton" name="PartnerTypeAndName">
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="BossName">
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="PhoneNumber">
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="Rank">
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="DiscountPercentage">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
+          <widget class="QPushButton" name="BossName">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
            </property>
-           <property name="styleSheet">
-            <string notr="true">border: none</string>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="PhoneNumber">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Rank">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
            </property>
            <property name="text">
             <string>PushButton</string>
@@ -83,51 +95,51 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="EditButton">
+       <widget class="QPushButton" name="DiscountPercentage">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>160</height>
+          <height>0</height>
          </size>
         </property>
-        <property name="maximumSize">
-         <size>
-          <width>100</width>
-          <height>16777215</height>
-         </size>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #67BA80;   border-radius: 10px</string>
+         <string notr="true">border: none</string>
         </property>
         <property name="text">
-         <string>Изменить
-партнёра</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="GetOrdersListButton">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>160</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>180</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: #67BA80;   border-radius: 10px</string>
-        </property>
-        <property name="text">
-         <string>PushButton1</string>
+         <string>PushButton</string>
         </property>
        </widget>
       </item>
      </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="GetOrdersListButton">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>180</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>180</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #67BA80;   border-radius: 10px</string>
+     </property>
+     <property name="text">
+      <string>Просмотреть 
+ историю</string>
+     </property>
     </widget>
    </item>
   </layout>

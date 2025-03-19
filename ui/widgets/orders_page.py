@@ -15,7 +15,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QScrollArea,
+from PySide6.QtWidgets import (QApplication, QLabel, QPushButton, QScrollArea,
     QSizePolicy, QVBoxLayout, QWidget)
 
 class Ui_OrdersPage(object):
@@ -28,26 +28,23 @@ class Ui_OrdersPage(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(OrdersPage.sizePolicy().hasHeightForWidth())
         OrdersPage.setSizePolicy(sizePolicy)
-        OrdersPage.setStyleSheet(u"background-color: #fff;")
+        OrdersPage.setStyleSheet(u"background-color: #fff;\n"
+"font-size: 18px\n"
+"")
         self.verticalLayout = QVBoxLayout(OrdersPage)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalFrame = QFrame(OrdersPage)
-        self.verticalFrame.setObjectName(u"verticalFrame")
-        self.verticalFrame.setStyleSheet(u"")
-        self.verticalLayout_2 = QVBoxLayout(self.verticalFrame)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.Title = QLabel(self.verticalFrame)
+        self.Title = QLabel(OrdersPage)
         self.Title.setObjectName(u"Title")
         self.Title.setStyleSheet(u"color: black; font-size: 20px")
 
-        self.verticalLayout_2.addWidget(self.Title)
+        self.verticalLayout.addWidget(self.Title)
 
-        self.scrollArea = QScrollArea(self.verticalFrame)
+        self.scrollArea = QScrollArea(OrdersPage)
         self.scrollArea.setObjectName(u"scrollArea")
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 581, 376))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 599, 364))
         self.verticalLayout_4 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.list = QVBoxLayout()
@@ -57,10 +54,15 @@ class Ui_OrdersPage(object):
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
-        self.verticalLayout_2.addWidget(self.scrollArea)
+        self.verticalLayout.addWidget(self.scrollArea)
 
+        self.BackButton = QPushButton(OrdersPage)
+        self.BackButton.setObjectName(u"BackButton")
+        self.BackButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.BackButton.setStyleSheet(u"background: #67BA80;\n"
+"border: none;")
 
-        self.verticalLayout.addWidget(self.verticalFrame)
+        self.verticalLayout.addWidget(self.BackButton)
 
 
         self.retranslateUi(OrdersPage)
@@ -71,5 +73,6 @@ class Ui_OrdersPage(object):
     def retranslateUi(self, OrdersPage):
         OrdersPage.setWindowTitle(QCoreApplication.translate("OrdersPage", u"Form", None))
         self.Title.setText(QCoreApplication.translate("OrdersPage", u"<html><head/><body><p align=\"center\">\u0417\u0430\u043a\u0430\u0437\u044b</p></body></html>", None))
+        self.BackButton.setText(QCoreApplication.translate("OrdersPage", u"\u041d\u0430\u0437\u0430\u0434", None))
     # retranslateUi
 
