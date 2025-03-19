@@ -1,7 +1,7 @@
 import math
 
-from db.connection import session
-from db.models import *
+from database.connection import session
+from database.models import *
 
 def module_4(product_type_id, material_id, quantity):
 

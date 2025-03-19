@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QWidget
-from db.connection import session
-from db.models import *
+from database.connection import session
+from database.models import *
 
 from ui.widgets.orders_page import Ui_OrdersPage
 

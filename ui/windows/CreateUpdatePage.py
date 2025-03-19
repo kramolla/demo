@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QWidget
-from db.connection import session
-from db.models import *
+from database.connection import session
+from database.models import *
 
 from ui.widgets.edit_partner_dialog import Ui_EditPartnerDialog
 

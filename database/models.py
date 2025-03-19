@@ -1,4 +1,4 @@
-from connection import Base
+from database.connection import Base
 from sqlalchemy import Column, Integer, Float, String, Date, ForeignKey
 
 class ProductTypeModel(Base):
