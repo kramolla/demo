@@ -1,4 +1,4 @@
-from connection import Base, engine, session
+from connection import engine, session
 from models import *
 
 from openpyxl import load_workbook
