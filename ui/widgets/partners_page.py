@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QHBoxLayout, QLabel, QLayout,
-    QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
-    QVBoxLayout, QWidget)
+    QListWidget, QListWidgetItem, QPushButton, QScrollArea,
+    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
 
 class Ui_PartnersPage(object):
     def setupUi(self, PartnersPage):
@@ -30,7 +30,7 @@ class Ui_PartnersPage(object):
         sizePolicy.setHeightForWidth(PartnersPage.sizePolicy().hasHeightForWidth())
         PartnersPage.setSizePolicy(sizePolicy)
         PartnersPage.setMinimumSize(QSize(0, 0))
-        PartnersPage.setAutoFillBackground(True)
+        PartnersPage.setAutoFillBackground(False)
         PartnersPage.setStyleSheet(u"QWidget{background: white;\n"
 "font-size: 18px}")
         self.verticalLayout_2 = QVBoxLayout(PartnersPage)
@@ -85,9 +85,14 @@ class Ui_PartnersPage(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 978, 336))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 962, 320))
         self.verticalLayout_3 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.listWidget = QListWidget(self.scrollAreaWidgetContents)
+        self.listWidget.setObjectName(u"listWidget")
+
+        self.verticalLayout_3.addWidget(self.listWidget)
+
         self.list = QVBoxLayout()
         self.list.setObjectName(u"list")
 

@@ -1,4 +1,5 @@
-from PySide6.QtWidgets import QWidget
+from PySide6.QtCore import QSize
+from PySide6.QtWidgets import QWidget, QListWidgetItem
 from sqlalchemy import func
 
 from database.connection import session
@@ -23,11 +24,13 @@ class PartnersPage(QWidget, Ui_PartnersPage):
 
     def fill_list(self):
         """Обновление списка партнёров."""
-        while self.list.count() > 0:
-            item = self.list.takeAt(0)
-            widget = item.widget()
-            if widget is not None:
-                widget.deleteLater()
+        # while self.list.count() > 0:
+        #     item = self.list.takeAt(0)
+        #     widget = item.widget()
+        #     if widget is not None:
+        #         widget.deleteLater()
+
+        self.listWidget.clear()
 
         # Загружаем данные из базы.
         partners = session.query(PartnerModel).order_by(PartnerModel.id).all()
@@ -39,7 +42,12 @@ class PartnersPage(QWidget, Ui_PartnersPage):
 
             card = PartnerCard(partner, orders, discount, self.go_to_orders_page, self.go_to_create_update_page)
 
-            self.list.addWidget(card)
+            # list.addWidget(card)
+
+            item = QListWidgetItem()
+            item.setSizeHint(QSize(900, 200))
+            self.listWidget.addItem(item)
+            self.listWidget.setItemWidget(item, card)
 
 # Функция для расчёта скидки на основе общего количества заказов партнёра.
 def calculate_discount(partner_id):
