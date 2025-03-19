@@ -77,8 +77,8 @@ font-size: 18px}</string>
           <widget class="QLabel" name="label_3">
            <property name="maximumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>50</width>
+             <height>50</height>
             </size>
            </property>
            <property name="text">
@@ -132,15 +132,12 @@ font-size: 18px}</string>
            <x>0</x>
            <y>0</y>
            <width>962</width>
-           <height>320</height>
+           <height>352</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
            <widget class="QListWidget" name="listWidget"/>
-          </item>
-          <item>
-           <layout class="QVBoxLayout" name="list"/>
           </item>
          </layout>
         </widget>

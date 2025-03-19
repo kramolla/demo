@@ -1,3 +1,4 @@
+from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QMainWindow, QStackedWidget
 
 from ui.windows.CreateUpdatePage import CreateUpdatePage
@@ -10,6 +11,7 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self.setGeometry(500, 250, 1000, 600)
+        self.setWindowIcon(QIcon("ui/icons/Master_pol.ico"))
         self.setWindowTitle("Список партнёров")
 
         # Создаем QStackedWidget

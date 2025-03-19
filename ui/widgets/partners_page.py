@@ -57,8 +57,8 @@ class Ui_PartnersPage(object):
 
         self.label_3 = QLabel(self.horizontalWidget)
         self.label_3.setObjectName(u"label_3")
-        self.label_3.setMaximumSize(QSize(100, 100))
-        self.label_3.setPixmap(QPixmap(u"../icons/Master_pol.png"))
+        self.label_3.setMaximumSize(QSize(50, 50))
+        self.label_3.setPixmap(QPixmap(u"ui/icons/Master_pol.png"))
         self.label_3.setScaledContents(True)
 
         self.horizontalLayout_2.addWidget(self.label_3)
@@ -85,18 +85,13 @@ class Ui_PartnersPage(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 962, 320))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 962, 352))
         self.verticalLayout_3 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.listWidget = QListWidget(self.scrollAreaWidgetContents)
         self.listWidget.setObjectName(u"listWidget")
 
         self.verticalLayout_3.addWidget(self.listWidget)
-
-        self.list = QVBoxLayout()
-        self.list.setObjectName(u"list")
-
-        self.verticalLayout_3.addLayout(self.list)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
