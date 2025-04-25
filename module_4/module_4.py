@@ -5,11 +5,11 @@ from database.models import *
 
 def module_4(product_type_id, material_id, quantity):
 
-    if product_type_id <= 0:
+    if product_type_id < 0:
         return -1
-    if material_id <= 0:
+    if material_id < 0:
         return -1
-    if quantity <= 0:
+    if quantity < 0:
         return -1
 
     product_type: ProductTypeModel = session.query(ProductTypeModel).filter(ProductTypeModel.id == product_type_id).first()

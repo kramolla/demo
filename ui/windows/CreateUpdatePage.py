@@ -19,9 +19,8 @@ class CreateUpdatePage(QWidget, Ui_CreateUpdatePage):
 
     def fill_form(self, partner):
         """Устанавливает partner и обновляет список заказов."""
-        self.partner = partner
-
         if partner is not None:
+            self.partner = partner
             self.TypeInput.setCurrentText(partner.type)
             self.NameInput.setText(partner.name)
             self.BossNameInput.setText(partner.boss_name)
@@ -54,7 +53,7 @@ class CreateUpdatePage(QWidget, Ui_CreateUpdatePage):
                 raise ValueError("Поле 'Электронная почта' не может быть пустым.")
 
             phone_number = self.PhoneNumberInput.text()
-            phone_number = phone_number.replace(" ", "").replace("_", "")
+            phone_number = phone_number.replace(" ", "")
 
             if len(phone_number) != 10:
                 raise ValueError("Поле 'Номер телефона' должно содержать 10 чисел.")
@@ -63,7 +62,6 @@ class CreateUpdatePage(QWidget, Ui_CreateUpdatePage):
                 raise ValueError("Поле 'Адрес' не может быть пустым.")
 
             inn = self.InnInput.text()
-            inn = inn.replace(" ", "").replace("_", "")
 
             if len(inn) != 10:
                 raise ValueError("Поле 'ИНН' должно содержать 10 чисел.")
@@ -71,29 +69,18 @@ class CreateUpdatePage(QWidget, Ui_CreateUpdatePage):
             if not self.RateInput.text().isdigit():
                 raise ValueError("Рейтинг должен быть числом.")
 
-            if self.partner:
-                # Обновление существующего партнёра.
-                self.partner.type = self.TypeInput.currentText()
-                self.partner.name = self.NameInput.text()
-                self.partner.address = self.AddressInput.text()
-                self.partner.inn = self.InnInput.text()
-                self.partner.boss_name = self.BossNameInput.text()
-                self.partner.phone_number = self.PhoneNumberInput.text()
-                self.partner.email = self.EmailInput.text()
-                self.partner.rate = int(self.RateInput.text())
-            else:
-                # Добавление нового партнёра.
-                new_partner = PartnerModel(
-                    type=self.TypeInput.currentText(),
-                    name=self.NameInput.text(),
-                    address=self.AddressInput.text(),
-                    inn=self.InnInput.text(),
-                    boss_name=self.BossNameInput.text(),
-                    phone_number=self.PhoneNumberInput.text(),
-                    email=self.EmailInput.text(),
-                    rate=int(self.RateInput.text())
-                )
-                session.add(new_partner)
+
+            # Обновление существующего партнёра.
+            self.partner.type = self.TypeInput.currentText()
+            self.partner.name = self.NameInput.text()
+            self.partner.address = self.AddressInput.text()
+            self.partner.inn = self.InnInput.text()
+            self.partner.boss_name = self.BossNameInput.text()
+            self.partner.phone_number = self.PhoneNumberInput.text()
+            self.partner.email = self.EmailInput.text()
+            self.partner.rate = int(self.RateInput.text())
+            if self.partner.id is None:
+                session.add(self.partner)
 
             # Сохраняем изменения в базе данных.
             session.commit()
